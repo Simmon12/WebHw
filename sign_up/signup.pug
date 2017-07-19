@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        title 注册
+        link(rel="stylesheet" href='style.css')
+        script(type="text/javascript" src="validator.js")
+        script(type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous")
+        script(type="text/javascript" src="signup.js")
+    body
+        h1 用户注册
+        form(method='POST')
+            if error
+                div.error!=error
+            div.username
+                label(for='username') 用户名
+                input(id='username' name='username' value=user.username)
+                span.error
+            div.sid
+                label(for='sid') 学号
+                input(id='sid' name='sid' value=user.sid)
+                span.error
+            div.phone
+                label(for='phone') 电话
+                input(id='phone' name='phone' value=user.phone)
+                span.error
+            div.email
+                label(for='email') 邮箱
+                input(id='email' name='email' value=user.email)
+                span.error
+            div.button
+                input.button.submit( type="submit"  value="提交")
+                input.button.reset(type="reset" value="重置")
+
+
